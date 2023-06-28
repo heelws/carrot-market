@@ -52,10 +52,17 @@ main {
   position: fixed;
   bottom: 120px;
   right: 20px;
-  background-color: #ffa569;
+  background-color: var(--button-primary);
   color: white;
   padding: 13px 16px 13px 16px;
   border-radius: 25px;
   font-size: 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+.write-btn:hover {
+  transform: scale(1.2);
+  background-color: var(--button-hover);
 }
