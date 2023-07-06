@@ -64,7 +64,7 @@ async def get_image(item_id):
     image_bytes=cur.execute(f"""
                             SELECT image from items WHERE id={item_id}
                             """).fetchone()[0]
-    return Response(content=bytes.fromhex(image_bytes)) 
+    return Response(content=bytes.fromhex(image_bytes),media_type='image/*') 
     # 저장할 때는 16진법으로 저장하고 다시 2진법으로 바꿔서 보여주는
     
 
